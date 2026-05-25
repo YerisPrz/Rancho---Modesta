@@ -1,0 +1,6 @@
+{
+  "name": "Rancho Modesta",
+  "description": "Sistema de gestión familiar para el control de producción agrícola de conucos, reparto y división de gastos, y cobro de alquileres de propiedades.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

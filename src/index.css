@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Theme definitions for Rancho Modesta */
+:root {
+  --bg-app: #f4f6f9;
+  --bg-sidebar: #ffffff;
+  --bg-panel: #ffffff;
+  --bg-card: #f8fafc;
+  --bg-darker: #f1f5f9;
+  --border-subtle: #e2e8f0;
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-mute: #64748b;
+  --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+
+  /* Animation helpers */
+  --animate-bounce-slow: bounce 3s infinite;
+}
+
+:root.dark, .dark {
+  --bg-app: #06090e;
+  --bg-sidebar: #0b0f19;
+  --bg-panel: #0b0f19;
+  --bg-card: #111724;
+  --bg-darker: #05070a;
+  --border-subtle: #1e293b;
+  --text-main: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-mute: #475569;
+  --shadow-subtle: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: var(--animate-bounce-slow);
+}
