@@ -9,8 +9,8 @@ interface LoginScreenProps {
 
 export function LoginScreen({ users, onLoginSuccess }: LoginScreenProps) {
   const [role, setRole] = useState<'Admin' | 'Miembro' | 'Invitado'>('Admin');
-  const [username, setUsername] = useState('rafael');
-  const [password, setPassword] = useState('admin123');
+  const [username, setUsername] = useState('Milton');
+  const [password, setPassword] = useState('Mil210375');
   const [error, setError] = useState('');
 
   const handleAutocomplete = (user: User, pass: string) => {
@@ -41,9 +41,9 @@ export function LoginScreen({ users, onLoginSuccess }: LoginScreenProps) {
 
     // Verify username + simple password match
     const isCorrect = 
-      (matchedUser.username === 'rafael' && password === 'admin123') ||
-      (matchedUser.username === 'maria' && password === 'perez2026') ||
-      (matchedUser.username === 'carlos' && password === 'empleado123') ||
+      (matchedUser.username === 'Milton' && password === 'Mil210375') ||
+      (matchedUser.username === 'Yeris' && password === 'Perez032313') ||
+      (matchedUser.username === 'Willer' && password === 'Willer24') ||
       (password === '1234'); // Fallback demo password
 
     if (isCorrect) {
@@ -206,52 +206,52 @@ export function LoginScreen({ users, onLoginSuccess }: LoginScreenProps) {
           </p>
           <div className="space-y-2" id="login-quick-access-list">
             
-            {/* Rafael */}
+            {/* Milton */}
             <button
-              onClick={() => handleAutocomplete({ id: 'u-1', username: 'rafael', fullName: 'Rafael Pérez (Padre)', role: 'Admin', avatar: '👨‍🌾' }, 'admin123')}
+              onClick={() => handleAutocomplete({ id: 'u-1', username: 'Milton', fullName: 'Milton Pérez (Padre)', role: 'Admin', avatar: '👨‍🌾' }, 'Mil210375')}
               className="w-full p-2.5 bg-slate-950/50 hover:bg-slate-950 text-left border border-slate-850 hover:border-emerald-500/30 rounded-xl transition-all flex items-center justify-between group"
-              id="quick-access-rafael"
+              id="quick-access-milton"
               type="button"
             >
               <div className="flex items-center gap-2.5">
                 <span className="text-xl">👨‍🌾</span>
                 <div className="leading-tight">
-                  <p className="text-xs font-bold text-white group-hover:text-emerald-400 transition-colors">Rafael Pérez <span className="text-[10px] text-slate-500 font-normal">(Padre)</span></p>
-                  <p className="text-[10px] text-slate-400 font-mono">user: rafael · pass: admin123</p>
+                  <p className="text-xs font-bold text-white group-hover:text-emerald-400 transition-colors">Milton Pérez <span className="text-[10px] text-slate-500 font-normal">(Padre)</span></p>
+                  <p className="text-[10px] text-slate-400 font-mono">user: milton · pass: Mil210375</p>
                 </div>
               </div>
               <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/15 font-mono font-bold tracking-wider">ADMIN</span>
             </button>
 
-            {/* Maria */}
+            {/* Yeris */}
             <button
-              onClick={() => handleAutocomplete({ id: 'u-2', username: 'maria', fullName: 'María Pérez (Hija - Finanzas)', role: 'Miembro', avatar: '👩‍🌾' }, 'perez2026')}
+              onClick={() => handleAutocomplete({ id: 'u-2', username: 'Yeris', fullName: 'Yeris Pérez (Hijo - Finanzas)', role: 'Miembro', avatar: '👩‍🌾' }, 'Perez032313')}
               className="w-full p-2.5 bg-slate-950/50 hover:bg-slate-950 text-left border border-slate-850 hover:border-blue-500/30 rounded-xl transition-all flex items-center justify-between group"
-              id="quick-access-maria"
+              id="quick-access-yeris"
               type="button"
             >
               <div className="flex items-center gap-2.5">
                 <span className="text-xl">👩‍🌾</span>
                 <div className="leading-tight">
-                  <p className="text-xs font-bold text-white group-hover:text-blue-400 transition-colors">María Pérez <span className="text-[10px] text-slate-500 font-normal">(Finanzas)</span></p>
-                  <p className="text-[10px] text-slate-400 font-mono">user: maria · pass: perez2026</p>
+                  <p className="text-xs font-bold text-white group-hover:text-blue-400 transition-colors">Yeris Pérez <span className="text-[10px] text-slate-500 font-normal">(Finanzas)</span></p>
+                  <p className="text-[10px] text-slate-400 font-mono">user: Yeris · pass: Perez032313</p>
                 </div>
               </div>
               <span className="text-[9px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/15 font-mono font-bold tracking-wider">FAMILIAR</span>
             </button>
 
-            {/* Carlos */}
+            {/* Willer */}
             <button
-              onClick={() => handleAutocomplete({ id: 'u-3', username: 'carlos', fullName: 'Carlos Gómez (Supervisor Conucos)', role: 'Miembro', avatar: '👨‍🔧' }, 'empleado123')}
+              onClick={() => handleAutocomplete({ id: 'u-3', username: 'Willer', fullName: 'Willer Pérez (Supervisor Conucos)', role: 'Miembro', avatar: '👨‍🔧' }, 'Willer24')}
               className="w-full p-2.5 bg-slate-950/50 hover:bg-slate-950 text-left border border-slate-850 hover:border-amber-500/30 rounded-xl transition-all flex items-center justify-between group"
-              id="quick-access-carlos"
+              id="quick-access-willer"
               type="button"
             >
               <div className="flex items-center gap-2.5">
                 <span className="text-xl">👨‍🔧</span>
                 <div className="leading-tight">
-                  <p className="text-xs font-bold text-white group-hover:text-amber-400 transition-colors">Carlos Gómez <span className="text-[10px] text-slate-500 font-normal">(Conucos)</span></p>
-                  <p className="text-[10px] text-slate-400 font-mono">user: carlos · pass: empleado123</p>
+                  <p className="text-xs font-bold text-white group-hover:text-amber-400 transition-colors">Willer Pérez <span className="text-[10px] text-slate-500 font-normal">(Conucos)</span></p>
+                  <p className="text-[10px] text-slate-400 font-mono">user: Willer · pass: Willer24</p>
                 </div>
               </div>
               <span className="text-[9px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/15 font-mono font-bold tracking-wider">EMPLEADO</span>
